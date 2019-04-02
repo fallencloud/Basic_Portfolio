@@ -99,7 +99,7 @@ class ExperienceClass {
         tasks: `<ol>
           <li>Reviewed support request Zendesk and routed to front-end or
           back-end developers.</li>          
-          <li>CCompleted minor changes in HTML, CSS, WordPress, Sitefinity
+          <li>Completed minor changes in HTML, CSS, WordPress, Sitefinity
           and SQL.</li>
           <li>Performed manual testing to verify functional/code issues,
           documented steps to reproduce, and identified possible causes

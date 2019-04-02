@@ -134,6 +134,25 @@ ol#skills li:nth-child(odd) {
   background-color: #0499ff;
 }
 
+.exp strong {
+  font-weight: bold;
+}
+
+.exp em {
+  font-style: italic;
+}
+
+.small-date {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.exp ol {
+  list-style-type: disc;
+  margin-left: 5%;
+  color: gray;
+}
+
 /*************************
 Footer
 *************************/
@@ -179,6 +198,7 @@ Media Queries
   }
   main {
     display: flex;
+    flex-wrap: wrap;
     flex: 1;
   }
 
@@ -199,7 +219,16 @@ Media Queries
     margin-bottom: 1%;
   }
 
-  section {
+  section#goals,
+  section#background {
+    flex: 1;
+    line-height: 1.5rem;
+  }
+
+  .exp {
+    min-width: 40%;
+  }
+  section.exp {
     flex: 1;
     line-height: 1.5rem;
   }

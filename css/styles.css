@@ -134,7 +134,8 @@ ol#skills li:nth-child(odd) {
   background-color: #0499ff;
 }
 
-.exp strong {
+.exp strong,
+.prj strong {
   font-weight: bold;
 }
 
@@ -225,10 +226,12 @@ Media Queries
     line-height: 1.5rem;
   }
 
-  .exp {
+  .exp,
+  .prj {
     min-width: 40%;
   }
-  section.exp {
+  section.exp,
+  section.prj {
     flex: 1;
     line-height: 1.5rem;
   }

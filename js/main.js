@@ -185,10 +185,98 @@ class ExperienceClass {
   }
 } //end ExperienceClass
 
+class ProjectClass {
+  constructor() {
+    this.projects = [
+      {
+        title: "Random Quote Generator",
+        description: "A quote generator",
+        image: "",
+        languages: `
+        <ol id="skills">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ol>`,
+        live_link:
+          "https://fallencloud.github.io/Random-Quote-Generator/index.html",
+        github: "https://github.com/fallencloud/Random-Quote-Generator",
+        details: ``
+      },
+      {
+        title: "RSVP",
+        description: "A RSVP app",
+        image: "",
+        languages: `
+        <ol id="skills">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ol>`,
+        live_link: "https://fallencloud.github.io/rsvp/index.html",
+        github: "https://github.com/fallencloud/rsvp",
+        details: ``
+      },
+      {
+        title: "Tic Tac Toe",
+        description: "A pass-n-play version of Tic Tac Toe",
+        image: "",
+        languages: `
+        <ol id="skills">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ol>`,
+        live_link: "https://fallencloud.github.io/Tic-Tac-Toe/",
+        github: "https://github.com/fallencloud/Tic-Tac-Toe",
+        details: ``
+      },
+      {
+        title: "Full Stack Conf",
+        description: "A React site with form validation",
+        image: "",
+        languages: `
+        <ol id="skills">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>jQuery</li>
+          <li>React</li>
+        </ol>`,
+        live_link: "https://fallencloud.github.io/Build-an-Interactive-Form/",
+        github: "https://github.com/fallencloud/Build-an-Interactive-Form",
+        details: ``
+      }
+    ];
+
+    this.loadProjects();
+  } //end constructor
+  loadProjects() {
+    let projectsHTML = this.projects.reduce(
+      (html, project) => (html += this.generateProjectsHTML(project)),
+      ""
+    );
+    $("#main").html(projectsHTML);
+  }
+  generateProjectsHTML(project) {
+    return `<section class="prj">
+    <h3><strong>${project.title}</strong> — <em><a href=${
+      project.live_link
+    } target="_blank">View Live</a></em></h3>
+    <span class="small-date">${project.description}</span>
+    ${project.languages}
+    </section>`;
+  }
+} //end ProjectClass
+
 $("#experience").click(() => {
   const seeJobs = new ExperienceClass();
 });
 
 $("#home").click(() => {
   const seeSections = new MainClass();
+});
+
+$("#projects").click(() => {
+  const seeProj = new ProjectClass();
 });

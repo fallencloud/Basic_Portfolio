@@ -269,12 +269,15 @@ class ProjectClass {
   }
 } //end ProjectClass
 
-$("#experience").click(() => {
-  const seeJobs = new ExperienceClass();
+$(document).ready(() => {
+  const seeSections = new MainClass();
 });
 
 $("#home").click(() => {
   const seeSections = new MainClass();
+});
+$("#experience").click(() => {
+  const seeJobs = new ExperienceClass();
 });
 
 $("#projects").click(() => {

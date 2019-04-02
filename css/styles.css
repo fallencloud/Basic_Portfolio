@@ -154,6 +154,18 @@ ol#skills li:nth-child(odd) {
   color: gray;
 }
 
+.prj a,
+.prj a:visited {
+  color: darkgray;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.prj a:hover {
+  color: pink;
+  text-decoration: underline;
+}
+
 /*************************
 Footer
 *************************/

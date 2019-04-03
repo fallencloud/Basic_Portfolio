@@ -155,13 +155,16 @@ ol#skills li:nth-child(odd) {
 }
 
 .prj a,
-.prj a:visited {
+.prj a:visited,
+.contact a,
+.contact a:visited {
   color: darkgray;
   text-decoration: none;
   font-style: italic;
 }
 
-.prj a:hover {
+.prj a:hover,
+.contact a:hover {
   color: pink;
   text-decoration: underline;
 }
@@ -239,11 +242,13 @@ Media Queries
   }
 
   .exp,
-  .prj {
+  .prj,
+  .contact {
     min-width: 40%;
   }
   section.exp,
-  section.prj {
+  section.prj,
+  section.contact {
     flex: 1;
     line-height: 1.5rem;
   }

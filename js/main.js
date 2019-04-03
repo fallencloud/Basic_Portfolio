@@ -269,9 +269,40 @@ class ProjectClass {
   }
 } //end ProjectClass
 
-$(document).ready(() => {
-  const seeSections = new MainClass();
-});
+class ContactClass {
+  constructor() {
+    this.contact = [
+      {
+        body: `<p>I'm currently looking for job opportunities in the Tidewater area of Virginia.</p>`
+      },
+      {
+        body: `<p>Contact Info</p>
+          <ol>
+            <li>Phone: <a href="tel:8135393065">813.539.3065</a></li>
+            <li>Email: <a href="mailto:sharinavjones@gmail.com">sharinavjones@gmail.com</a></li>
+          </ol>
+          `
+      }
+    ];
+
+    this.loadContacts();
+  } //end constructor
+
+  loadContacts() {
+    let contactsHTML = this.contact.reduce(
+      (html, contact) => (html += this.generateContactsHTML(contact)),
+      ""
+    );
+    $("#main").html(contactsHTML);
+  } //end loadContacts()
+
+  generateContactsHTML(contact) {
+    return `<section class="contact">
+    ${contact.body}
+    </section>
+    `;
+  }
+}
 
 $("#home").click(() => {
   const seeSections = new MainClass();
@@ -282,4 +313,8 @@ $("#experience").click(() => {
 
 $("#projects").click(() => {
   const seeProj = new ProjectClass();
+});
+
+$("#contact").click(() => {
+  const seeContacts = new ContactClass();
 });
